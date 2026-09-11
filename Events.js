@@ -6,3 +6,9 @@ emitter.on('message logged', function (){
 })
 
 emitter.emit('message logged');
+
+emitter.on('logging',(arg) => {
+    console.log('message logged',arg);
+})
+
+emitter.emit('logging',{id: 1, data: 'message' });
